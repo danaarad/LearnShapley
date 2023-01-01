@@ -13,7 +13,7 @@ from transformers import AutoModelForSequenceClassification
 
 from models.dataset import create_query_result_tensors, process_attention_masks
 from models.eval import  eval_ranking
-from models.bert.bert_shap import BertShapModel
+from models.learnshapley.finetuning import BertShapModel
 from structures.query_log import load_query_data, get_tuples_to_values_mapping
 
 import similarity_functions.syntax_based_similarity as syntax_similarity

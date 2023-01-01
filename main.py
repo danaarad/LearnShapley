@@ -5,8 +5,8 @@ from transformers import BertTokenizer
 from models.transformer.train import train as t_train
 from models.transformer.train import *
 from models.bert.train import train as b_train
-from models.learnshapley.bert_sim import train as b_sim_train
-from models.learnshapley.bert_shap import train as b_shap_train
+from models.learnshapley.pretraining import train as b_sim_train
+from models.learnshapley.finetuning import train as b_shap_train
 
 from models.bert.eval_bert import eval as b_eval
 from models.learnshapley.eval_bert import eval as ls_eval
@@ -27,11 +27,11 @@ def train(args):
     elif args.model == "bert":
         args.model_name = f"bert_{args.max_results_for_train}_results_{args.batch_size}_bs"
         b_train(args)
-    elif args.model == "bert_sim":
-        args.model_name = f"bert_sim_{args.max_results_for_train}_results_{args.batch_size}_bs"
+    elif args.model == "pretraining":
+        args.model_name = f"learnshapley_sim_{args.max_results_for_train}_results_{args.batch_size}_bs"
         b_sim_train(args)
-    elif args.model == "bert_shap":
-        args.model_name = f"bert_shap_{args.max_results_for_train}_results_{args.batch_size}_bs"
+    elif args.model == "finetuning":
+        args.model_name = f"learnshapley_{args.max_results_for_train}_results_{args.batch_size}_bs"
         b_shap_train(args)
 
 

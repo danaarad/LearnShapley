@@ -13,7 +13,7 @@ from sklearn.metrics import mean_squared_error
 from sklearn.metrics import r2_score
 
 from models.learnshapley.dataset import QueriesDataset
-from models.learnshapley.bert_sim import BertSimModel
+from models.learnshapley.pretraining import BertSimModel
 
 
 class BertShapModel(nn.Module):

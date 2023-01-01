@@ -85,8 +85,8 @@ def create_similarity_tensors(query_log_file, tokenizer, args, split):
     sim_w_values = []
 
     Sims = sim_s.Similarity(f"./similarity_functions/similarity_cache/{args.dataset}_syntax_similarity_cache.json")
-    Simr = sim_r.Similarity("./similarity_functions/similarity_cache/{args.dataset}_rank_similarity_cache.json")
-    Simw = sim_w.Similarity("./similarity_functions/similarity_cache/{args.dataset}_witness_similarity_cache.json")
+    Simr = sim_r.Similarity(f"./similarity_functions/similarity_cache/{args.dataset}_rank_similarity_cache.json")
+    Simw = sim_w.Similarity(f"./similarity_functions/similarity_cache/{args.dataset}_witness_similarity_cache.json")
 
     if split == "train":
         percent = f"{args.queries_percent_for_train}_" if args.queries_percent_for_train != 100 else ""
