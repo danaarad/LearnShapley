@@ -1,0 +1,8 @@
+tqdm
+numpy
+pandas
+seaborn
+matplotlib
+scikit-learn
+transformers
+mo-sql-parsing
