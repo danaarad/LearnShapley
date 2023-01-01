@@ -4,7 +4,7 @@ Implementation of LearnShapley - a system for ranking facts contributions based 
 ## Abstract
 LearnShapley employs Machine Learning to rank input facts based on their estimated contribution to query answers. We train a BERT-based model over DBShap, a new benchmark of queries, output tuples and contributing facts, for the task of ranking fact contribution. At inference time, LearnShapley is given a new query, an output tuple of interest, and its lineage (i.e. the set of all facts that have contributed in some way to the generation of the tuple). LearnShapley is able to leverage similarity measures applied to the query in hand and the queries stored in the training data, to compute a ranking of the tuples in the lineage based on their contribution. LearnShapley is thus a real-time alternative to ranking tuples based on algorithmic computation of Shapley values. 
 
-<img src="images/system.png" height="130" width="860">
+<img src="images/system.png">
 
 ## Prepare the Enviroment 
 1. Clone this repository: 
